@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* CSS Custom Properties - Color Variables */
+:root {
+  /* Main Color Palette */
+  --background-primary: #F2F2F2;    /* Light gray background */
+  --background-secondary: #EAE4D5;   /* Warm beige for cards/sections */
+  --accent-color: #B6B09F;           /* Muted sage green for highlights */
+  --text-primary: #000000;           /* Black for primary text */
+
+  /* Extended Color Variables for better UX */
+  --text-secondary: #4A4A4A;         /* Dark gray for secondary text */
+  --text-muted: #6B6B6B;             /* Medium gray for muted text */
+  --border-color: #D0CCC0;           /* Subtle border color derived from palette */
+  --shadow-color: rgba(182, 176, 159, 0.2); /* Soft shadow using accent color */
+  --hover-overlay: rgba(182, 176, 159, 0.15); /* Light overlay for hover states */
+
+  /* Interactive States */
+  --accent-hover: #A5A094;           /* Darker shade of accent for hover */
+  --accent-active: #9A9489;          /* Even darker for active states */
+
+  /* Semantic Colors */
+  --success: #7A8471;                /* Muted green */
+  --warning: #C4A57A;                /* Warm brown */
+  --error: #A67C73;                  /* Muted red-brown */
+  --info: #8B9BAA;                   /* Muted blue-gray */
+}
+
+button.primary {
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  background: var(--accent-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+button.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button.primary:active {
+  background: var(--accent-active);
+  border-color: var(--accent-active);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+button.secondary {
+  padding: 12px 20px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.secondary:hover {
+  background: var(--hover-overlay);
+  color: var(--text-primary);
+  border-color: var(--accent-color);
+}
+

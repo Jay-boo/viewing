@@ -9,7 +9,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
       <header class="app-header">
         <h1>{{ title }}</h1>
         <nav>
-          <a routerLink="/gallery" routerLinkActive="active">GalleryComponent</a>
+          <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
         </nav>
       </header>
 
